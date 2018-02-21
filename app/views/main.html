@@ -1,0 +1,86 @@
+
+
+
+<div class="completebeige" ng-show="!isLoading" >
+<div class="jumbotron" style="height:250px;background-color:#e3dfdb"></div>
+<div class="container" ng-controller="MainController">
+  <div class="row row-content">
+    <div class="col-md-12 col-lg-12 col-xs-12" ng-if="!showPhotos">
+
+        <h3>{{message}}</h3>
+
+    </div>
+    <div class="thumbnails">
+      <div class="col-md-8 col-lg-8 col-xs-12 repeated-item" ng-show="showPhotos" ng-repeat="photo in photosRow1">
+        <a ui-sref="app.activitydetail({id:photo.public_id})"> 
+          <cl-image public-id={{photo.public_id}}  class="thumbnail inline img-responsive" width="600" height="200" crop="scale" format="jpg"  ></cl-image>
+          <h3>{{photo.title}}</h3>
+          <p>{{photo.description}}</p>  
+        </a>
+      </div>
+
+      <div class="col-md-4 offset-md-8 col-lg-4 offset-md-8 col-xs-12 repeated-item" ng-show="showPhotos" ng-repeat="photo in photosRow1a">
+          <a ui-sref="app.activitydetail({id:photo.public_id})"> 
+          <cl-image public-id={{photo.public_id}}  class="thumbnail inline img-responsive" width="250" height="200" crop="scale" format="jpg" ></cl-image>
+          <h3>{{photo.title}}</h3>
+          <p>{{photo.description}}</p>    
+          </a>
+        </div>
+    </div>
+
+  </div>
+  <div class="row row-content">
+
+      
+
+      <div class="col-md-12 col-lg-12 col-xs-12" ng-if="!showPhotos">
+          
+          <h3>{{message}}</h3>
+          
+      </div>
+  <div class="thumbnails">
+    <div class="col-md-4 col-lg-4 col-xs-12 repeated-item" ng-show="showPhotos" ng-repeat="photo in photosRow2">
+        <a ui-sref="app.activitydetail({id:photo.public_id})"> 
+        <cl-image public-id={{photo.public_id}}  class="thumbnail inline img-responsive" width="250" height="200" crop="scale" format="jpg"></cl-image>
+        <h3>{{photo.title}}</h3>
+        <p>{{photo.description}}</p> 
+        </a>   
+    </div>
+  </div>
+
+
+  </div>
+  <div class="row row-content">
+      <div class="col-md-12 col-lg-12 col-xs-12" ng-if="!showPhotos">
+          
+          <h3>{{message}}</h3>
+          
+      </div>
+  <div class="thumbnails">
+    <div class="col-md-4 col-lg-4 col-xs-12 repeated-item" ng-show="showPhotos" ng-repeat="photo in photosRow3">
+        <a ui-sref="app.activitydetail({id:photo.public_id})"> 
+        <cl-image public-id={{photo.public_id}}  class="thumbnail inline img-responsive" width="250" height="150" crop="scale" format="jpg"></cl-image>
+        <h3>{{photo.title}}</h3>
+        <p>{{photo.description}}</p> 
+        </a>
+
+    </div>
+    <div class="col-md-8 offset-md-4 col-lg-8 offset-lg-4 col-xs-12 repeated-item" ng-show="showPhotos" ng-repeat="photo in photosRow3a">
+        <a ui-sref="app.activitydetail({id:photo.public_id})"> 
+        <cl-image public-id={{photo.public_id}}  class="thumbnail inline img-responsive" width="600" height="150" crop="scale" format="jpg"></cl-image>
+        <h3>{{photo.title}}</h3>
+        <p>{{photo.description}}</p> 
+        </a>
+    </div>
+  </div> 
+
+
+  </div>
+  
+
+
+
+
+</div>
+</div>
+
